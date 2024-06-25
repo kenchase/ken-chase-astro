@@ -1,0 +1,268 @@
+/* Variables */
+
+:root {
+  --main-bg-color: #fff;
+  --main-bg-color-inverse: #000;
+  --main-text-color: #000;
+  --main-text-color-inverse: #fff;
+  --main-text-hover: #4b4b4b;
+  --section-padding: 20px;
+  @media (min-width: 70rem) {
+    --section-padding: 60px;
+  }
+}
+
+body {
+  font-family: 'Helvetica Neue';
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  scroll-behavior: smooth;
+}
+
+/* Global Styles */
+
+h1 {
+  font-size: 3rem;
+  @media (min-width: 70rem) {
+    font-size: 9vw;
+  }
+  line-height: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 4rem;
+  @media (min-width: 70rem) {
+    font-size: 6vw;
+  }
+  letter-spacing: -4%;
+  line-height: 1em;
+  margin: 0 0 20px 0;
+}
+
+h3 {
+  font-size: 2rem;
+  @media (min-width: 70rem) {
+    font-size: 3vw;
+  }
+  letter-spacing: -4%;
+  line-height: 1em;
+  margin: 0 0 20px 0;
+}
+
+p,
+ul {
+  margin-bottom: 20px;
+  @media (min-width: 70rem) {
+    margin-bottom: 40px;
+  }
+}
+
+a {
+  color: var(--main-text-color);
+  &:hover {
+    color: var(--main-text-hover);
+  }
+}
+
+.list--rows-two {
+  columns: 1;
+  @media (min-width: 70rem) {
+    columns: 2;
+  }
+}
+
+/* Layout Styles */
+
+.page-section {
+  font-size: 1.5rem;
+  min-height: 100vh;
+  @media (min-width: 70rem) {
+    font-size: 2vw;
+  }
+  max-width: 1400px;
+  padding: var(--section-padding);
+
+  h2 {
+    background: #fff;
+    position: sticky;
+    top: 0px;
+    padding: 2rem 0;
+  }
+}
+
+.page-section-text {
+  max-width: 1200px;
+  margin-bottom: 100px;
+}
+
+.page-sub-section {
+  margin-bottom: 100px;
+}
+
+@media (min-width: 70rem) {
+}
+
+/* Component Styles */
+
+.main-header {
+  padding: var(--section-padding);
+  max-width: 1600px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-header-title {
+  font-size: clamp(3rem, 19vw, 300px);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  margin: 0 0 5rem -1.25%;
+}
+
+.main-header-scroll {
+  text-align: right;
+  position: absolute;
+  right: 20px;
+  bottom: 100px;
+  @media (min-width: 70rem) {
+    margin-top: 0;
+    bottom: 60px;
+    right: 60px;
+  }
+}
+
+.main-header-scroll a {
+  font-size: 2rem;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  line-height: 1em;
+}
+
+.main-header-scroll a:hover {
+  background-color: var(--main-text-hover);
+  transition: ease-in 250ms;
+}
+
+.main-nav {
+  font-size: clamp(4rem, 6vw, 150px);
+
+  line-height: 1em;
+}
+
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.main-nav__list-item {
+  text-decoration: none;
+  margin: 0 0 20px 0;
+}
+.main-nav__list-item a {
+  color: var(--main-text);
+  text-decoration: none;
+  transition: ease-in 250ms;
+}
+.main-nav__list-item a:hover {
+  color: var(--main-text-hover);
+  text-decoration: none;
+}
+
+.photo-gallery-list {
+  list-style: none;
+  margin: 0 0 20px 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.photo-gallery-list-item {
+  border-radius: 8px;
+}
+
+.photo-gallery-list-item img {
+  display: block;
+  border-radius: 8px;
+}
+
+.photo-gallery-btn {
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+.photo-gallery-btn:hover {
+  color: var(--main-text-hover);
+}
+
+.main-footer {
+  background-color: var(--main-bg-color-inverse);
+  color: var(--main-text-color-inverse);
+  padding: 40px 100px;
+  margin-top: 40px;
+}
+
+.footer-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.footer-col {
+  flex: 1;
+}
+
+.footer-nav {
+  font-size: 4rem;
+}
+
+.footer-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-nav__list-item a {
+  color: var(--main-text);
+  text-decoration: none;
+  transition: ease-in 250ms;
+}
+.footer-nav__list-item a:hover {
+  color: var(--main-text-hover);
+  text-decoration: none;
+}
+
+.footer-nav-social {
+  margin: auto;
+}
+
+.footer-nav-social__list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.footer-nav-social__list-item {
+  font-size: 3rem;
+}
+
+.footer-nav-social__list-item a {
+  color: var(--main-text);
+  text-decoration: none;
+  transition: ease-in 250ms;
+}
+.footer-nav-social__list-item a:hover {
+  color: var(--main-text-hover);
+  text-decoration: none;
+}
